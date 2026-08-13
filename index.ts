@@ -1,8 +1,11 @@
-function getArea(shape: "circle" | "square", size: number) : number{
-    if (shape == "circle"){
-        return Math.PI * size * size
+function isEven(n: number): boolean {
+    
+    if (n%2 !== 0){
+        return false
     }
-    return size * size
+    return true
 }
-console.log(getArea("circle",32),
-getArea("square",21))
+console.log(
+isEven(4),
+isEven(7)
+)
