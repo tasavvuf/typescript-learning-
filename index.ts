@@ -1,14 +1,8 @@
-function describeInput(val: unknown): string  {
-    if (typeof val === "string"){
-        return "string type"
-    }
-    if (typeof val === "number"){
-        return "number type"
-    }
-    if (typeof val === "boolean"){
-        return " boolean data type "
-    }
-   return "unrecognized type"
+function safeDivide(a: number, b: number): number | string {
+   if(b===0){
+    return "cant devide by zero"
+   }
+    return a/b
 }
 
-console.log(describeInput("tev"),describeInput(67),describeInput(false),describeInput([1,"two",3]))
+console.log(safeDivide(1,4),safeDivide(2,0))
