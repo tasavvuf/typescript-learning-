@@ -1,8 +1,8 @@
-function formatValue(input: string | number) : string {
-    if (typeof(input)== "string"){
-        return `${input.toUpperCase()}`
+function getArea(shape: "circle" | "square", size: number) : number{
+    if (shape == "circle"){
+        return Math.PI * size * size
     }
-    return `${input.toFixed(2)}`
+    return size * size
 }
-console.log(formatValue("tasav")
-,formatValue(99.88888888))
+console.log(getArea("circle",32),
+getArea("square",21))
