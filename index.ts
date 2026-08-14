@@ -1,8 +1,11 @@
-function safeDivide(a: number, b: number): number | string {
-   if(b===0){
-    return "cant devide by zero"
-   }
-    return a/b
+function getFirstChar(input: string | null | undefined): string{
+    if(typeof input === "string"&& input !== ""){
+        return input.charAt(0)
+    }
+    return "N/A"
 }
-
-console.log(safeDivide(1,4),safeDivide(2,0))
+console.log(getFirstChar("Tev"))     // T
+console.log(getFirstChar("Hello"))   // H
+console.log(getFirstChar(""))        // N/A
+console.log(getFirstChar(null))      // N/A
+console.log(getFirstChar(undefined)) // N/A
